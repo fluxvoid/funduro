@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="fitness_types">
+        <item>un-fit</item>
+        <item>average</item>
+        <item>fit</item>
+        <item>athletic</item>
+        <item>super-fit</item>
+    </string-array>
+    <string-array name="ability_types">
+        <item>novice</item>
+        <item>beginner</item>
+        <item>intermediate</item>
+        <item>advanced</item>
+        <item>extreme</item>
+    </string-array>
+</resources>

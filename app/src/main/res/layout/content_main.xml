@@ -55,11 +55,12 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:inputType="number"
+            android:inputType="date"
             android:ems="10"
             android:id="@+id/ageText"
             android:layout_row="1"
             android:layout_column="1" />
+
     </TableRow>
 
     <TableRow

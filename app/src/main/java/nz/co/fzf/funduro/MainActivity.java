@@ -36,13 +36,7 @@ public class MainActivity extends ActionBarActivity {
         // Add listener to the Spinner
         addListenerToUnitTypeSpinner();
 
-        Button openFitnessRater = (Button)findViewById(R.id.faagButton);
-        openFitnessRater.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View view){
-                Intent myIntent = new Intent(view.getContext(), FitnessRater.class);
-                startActivityForResult(myIntent,0);
-            }
-        });
+        initialiseFitnessRater();
 
         // Get a reference to the edit text view to retrieve the amount of the unit type
         amountTextView = (EditText) findViewById(R.id.amount_text_view);
@@ -66,6 +60,18 @@ public class MainActivity extends ActionBarActivity {
         milligramTextView = (TextView) findViewById(R.id.mg_text_view);
         kilogramTextView = (TextView) findViewById(R.id.kg_text_view);
 
+    }
+
+    public void initialiseFitnessRater(){
+
+        Button openFitnessRater = (Button)findViewById(R.id.faagButton);
+
+        openFitnessRater.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                Intent myIntent = new Intent(view.getContext(), FitnessRater.class);
+                startActivityForResult(myIntent,0);
+            }
+        });
     }
 
     public void addItemsToUnitTypeSpinner() {
