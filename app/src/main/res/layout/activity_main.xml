@@ -6,10 +6,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:background="f1background"
         tools:context="co.nz.fzf.app.MainActivity">
 
     <TableRow
@@ -17,165 +14,187 @@
         android:layout_height="match_parent">
 
         <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Convert"
-                android:id="@+id/convert_from_text_view"
-                android:layout_weight="1"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Convert"
+            android:id="@+id/convert_from_text_view" />
 
         <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/amount_text_view"
-                android:inputType="numberDecimal"
-                android:text="1.0"
-                android:layout_weight="1" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/amount_text_view"
+            android:inputType="numberDecimal"
+            android:text="1.0" />
 
         <Spinner
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/unit_type_spinner"
-                android:layout_weight="1" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/unit_type_spinner" />
     </TableRow>
 
-
-    <!-- You need the min Android version set to 14 in build.gradle -->
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <GridLayout
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:layout_below="@+id/unit_type_spinner"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:columnCount="2"
-                android:rowCount="6"
-                android:orientation="horizontal"
-                android:background="#ffdae6ff"
-                android:padding="15dp">
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/unit_type_spinner"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:columnCount="2"
+            android:rowCount="6"
+            android:orientation="horizontal"
+            android:background="#ffdae6ff"
+            android:padding="15dp">
 
-                <TextView
-                    android:id="@+id/tsp_text_view"
-                    android:text="default_teaspoon_value"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left|top"
-                    android:layout_marginRight="30dp"
-                    android:layout_marginBottom="30dp" />
+            <TextView
+                android:id="@+id/tsp_text_view"
+                android:text="default_teaspoon_value"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|top"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="30dp" />
 
-                <TextView
-                    android:id="@+id/cup_text_view"
-                    android:text=".0208 cup"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_gravity="left|top" />
+            <TextView
+                android:id="@+id/cup_text_view"
+                android:text=".0208 cup"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_gravity="left|top" />
 
-                <TextView
-                    android:id="@+id/tbs_text_view"
-                    android:text=".3333 tbs"
-                    android:layout_gravity="left|top"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_marginRight="30dp"
-                    android:layout_marginBottom="30dp" />
+            <TextView
+                android:id="@+id/tbs_text_view"
+                android:text=".3333 tbs"
+                android:layout_gravity="left|top"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="30dp" />
 
-                <TextView
-                    android:id="@+id/oz_text_view"
-                    android:text=".1666 oz"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_gravity="left|top" />
+            <TextView
+                android:id="@+id/oz_text_view"
+                android:text=".1666 oz"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_gravity="left|top" />
 
-                <TextView
-                    android:id="@+id/kg_text_view"
-                    android:text=".0057 kg"
-                    android:layout_gravity="left|top"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_marginRight="30dp"
-                    android:layout_marginBottom="30dp" />
+            <TextView
+                android:id="@+id/kg_text_view"
+                android:text=".0057 kg"
+                android:layout_gravity="left|top"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="30dp" />
 
-                <TextView
-                    android:id="@+id/quart_text_view"
-                    android:text=".0052 quart"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_gravity="left|top" />
+            <TextView
+                android:id="@+id/quart_text_view"
+                android:text=".0052 quart"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_gravity="left|top" />
 
-                <TextView
-                    android:id="@+id/gallon_text_view"
-                    android:text=".0013 gallon"
-                    android:layout_gravity="left|top"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_marginRight="30dp"
-                    android:layout_marginBottom="30dp" />
+            <TextView
+                android:id="@+id/gallon_text_view"
+                android:text=".0013 gallon"
+                android:layout_gravity="left|top"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="30dp" />
 
-                <TextView
-                    android:id="@+id/pound_text_view"
-                    android:text=".0125 pound"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_gravity="left|top" />
+            <TextView
+                android:id="@+id/pound_text_view"
+                android:text=".0125 pound"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_gravity="left|top" />
 
-                <TextView
-                    android:id="@+id/ml_text_view"
-                    android:text="4.9289 ml"
-                    android:layout_gravity="left|top"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_marginRight="30dp"
-                    android:layout_marginBottom="30dp" />
+            <TextView
+                android:id="@+id/ml_text_view"
+                android:text="4.9289 ml"
+                android:layout_gravity="left|top"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="30dp" />
 
-                <TextView
-                    android:id="@+id/liter_text_view"
-                    android:text=".0049 liter"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_gravity="left|top" />
+            <TextView
+                android:id="@+id/liter_text_view"
+                android:text=".0049 liter"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_gravity="left|top" />
 
-                <TextView
-                    android:id="@+id/mg_text_view"
-                    android:text="5687.5000 mg"
-                    android:layout_gravity="left|top"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_marginRight="30dp"
-                    android:layout_marginBottom="15dp" />
+            <TextView
+                android:id="@+id/mg_text_view"
+                android:text="5687.5000 mg"
+                android:layout_gravity="left|top"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="15dp" />
 
-                <TextView
-                    android:id="@+id/pint_text_view"
-                    android:text=".0104 pint"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_gravity="left|top" />
+            <TextView
+                android:id="@+id/pint_text_view"
+                android:text=".0104 pint"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_gravity="left|top" />
 
+        </GridLayout>
 
-            </GridLayout>
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageButton"
-            android:layout_column="3" />
     </TableRow>
 
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:padding="0dp"
+        android:id="@+id/bottomBarLayout">
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Open FAAG"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="FAAG"
+            android:drawableTop="@drawable/profileiconsmall"
+            android:marginBottom="0dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:paddingTop="8dp"
+            android:textSize="8dp"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_gravity="bottom"
             android:id="@+id/faagButton" />
-    </TableRow>
 
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
+        <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="yes"
-            android:id="@+id/textView5" />
-    </TableRow>
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="RACE"
+            android:drawableTop="@drawable/bicycle2iconsmall"
+            android:marginBottom="0dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:paddingTop="8dp"
+            android:textSize="8dp"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_gravity="bottom"
+            android:id="@+id/button2" />
 
-
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="SETTINGS"
+            android:drawableTop="@drawable/settingsiconsmall"
+            android:marginBottom="0dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:paddingTop="8dp"
+            android:textSize="8dp"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_gravity="bottom"
+            android:id="@+id/button3" />
+    </LinearLayout>
 
     <!-- A Table Layout arranges widgets into rows and columns and is
     available if you must use Android versions sub 14 -->
