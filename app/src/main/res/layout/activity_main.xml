@@ -6,30 +6,33 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="f1background"
+        android:background="@drawable/rachelathertonvallnord2017"
         tools:context="co.nz.fzf.app.MainActivity">
 
     <TableRow
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Convert"
+            android:layout_weight="2"
             android:id="@+id/convert_from_text_view" />
 
         <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
             android:id="@+id/amount_text_view"
             android:inputType="numberDecimal"
+            android:layout_weight="2"
             android:text="1.0" />
 
         <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="2"
             android:id="@+id/unit_type_spinner" />
     </TableRow>
 
@@ -46,7 +49,7 @@
             android:columnCount="2"
             android:rowCount="6"
             android:orientation="horizontal"
-            android:background="#ffdae6ff"
+            android:background="#80dae6ff"
             android:padding="15dp">
 
             <TextView
@@ -61,6 +64,8 @@
 
             <TextView
                 android:id="@+id/cup_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text=".0208 cup"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_gravity="left|top" />
@@ -69,6 +74,8 @@
                 android:id="@+id/tbs_text_view"
                 android:text=".3333 tbs"
                 android:layout_gravity="left|top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_marginRight="30dp"
                 android:layout_marginBottom="30dp" />
@@ -153,7 +160,6 @@
             android:layout_weight="1"
             android:text="FAAG"
             android:drawableTop="@drawable/profileiconsmall"
-            android:marginBottom="0dp"
             android:paddingBottom="8dp"
             android:paddingLeft="2dp"
             android:paddingRight="2dp"
@@ -161,6 +167,7 @@
             android:textSize="8dp"
             style="?android:attr/borderlessButtonStyle"
             android:layout_gravity="bottom"
+            android:background="#ccffffff"
             android:id="@+id/faagButton" />
 
         <Button
@@ -169,7 +176,6 @@
             android:layout_weight="1"
             android:text="RACE"
             android:drawableTop="@drawable/bicycle2iconsmall"
-            android:marginBottom="0dp"
             android:paddingBottom="8dp"
             android:paddingLeft="2dp"
             android:paddingRight="2dp"
@@ -177,6 +183,7 @@
             android:textSize="8dp"
             style="?android:attr/borderlessButtonStyle"
             android:layout_gravity="bottom"
+            android:background="#ccffffff"
             android:id="@+id/button2" />
 
         <Button
@@ -185,7 +192,6 @@
             android:layout_weight="1"
             android:text="SETTINGS"
             android:drawableTop="@drawable/settingsiconsmall"
-            android:marginBottom="0dp"
             android:paddingBottom="8dp"
             android:paddingLeft="2dp"
             android:paddingRight="2dp"
@@ -193,6 +199,7 @@
             android:textSize="8dp"
             style="?android:attr/borderlessButtonStyle"
             android:layout_gravity="bottom"
+            android:background="#ccffffff"
             android:id="@+id/button3" />
     </LinearLayout>
 

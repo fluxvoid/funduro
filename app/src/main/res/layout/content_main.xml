@@ -2,7 +2,8 @@
 
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#efefef">
 
     <TableRow
         android:layout_width="match_parent"
@@ -17,7 +18,7 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="34dp"
+
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:textSize="@dimen/abc_action_bar_default_height"
@@ -30,7 +31,9 @@
             android:id="@+id/fitnessSpinner"
             android:layout_row="0"
             android:layout_column="1"
-            android:spinnerMode="dropdown" />
+            android:spinnerMode="dropdown" >
+        <requestFocus/>
+        </Spinner>
     </TableRow>
 
     <TableRow
@@ -59,6 +62,8 @@
             android:ems="10"
             android:id="@+id/ageText"
             android:layout_row="1"
+            android:focusable="false"
+            android:longClickable="false"
             android:layout_column="1" />
 
     </TableRow>
@@ -119,16 +124,32 @@
             android:spinnerMode="dropdown" />
     </TableRow>
 
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:padding="0dp"
+        android:id="@+id/bottomBarLayout">
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Save and Exit"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="SAVE | EXIT"
+            android:drawableTop="@drawable/profileiconsmall"
+            android:paddingBottom="8dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:paddingTop="8dp"
+            android:textSize="8dp"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_gravity="bottom"
+            android:background="#ccffffff"
             android:id="@+id/saveButton" />
-    </TableRow>
+
+
+    </LinearLayout>
 
 </TableLayout>
 

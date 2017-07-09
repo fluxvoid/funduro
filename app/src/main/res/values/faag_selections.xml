@@ -14,4 +14,8 @@
         <item>advanced</item>
         <item>extreme</item>
     </string-array>
+    <string-array name="gender_types">
+        <item>female</item>
+        <item>male</item>
+    </string-array>
 </resources>
