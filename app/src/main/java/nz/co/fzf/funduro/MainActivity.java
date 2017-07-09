@@ -2,7 +2,6 @@ package nz.co.fzf.funduro;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
@@ -11,7 +10,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -20,6 +18,7 @@ public class MainActivity extends ActionBarActivity {
 
     private EditText amountTextView;
     private Button openFitnessRater;
+    private Button openEventMain;
 
     TextView teaspoonTextView, tablespoonTextView, cupTextView, ounceTextView,
             pintTextView, quartTextView, gallonTextView, poundTextView,
@@ -37,6 +36,7 @@ public class MainActivity extends ActionBarActivity {
         addListenerToUnitTypeSpinner();
 
         initialiseFitnessRater();
+        initialiseEventMain();
 
         // Get a reference to the edit text view to retrieve the amount of the unit type
         amountTextView = (EditText) findViewById(R.id.amount_text_view);
@@ -69,6 +69,17 @@ public class MainActivity extends ActionBarActivity {
         openFitnessRater.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
                 Intent myIntent = new Intent(view.getContext(), FitnessRater.class);
+                startActivityForResult(myIntent,0);
+            }
+        });
+    }
+
+    public void initialiseEventMain(){
+        Button openEventMain = (Button)findViewById(R.id.eventButton);
+
+        openEventMain.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                Intent myIntent = new Intent(view.getContext(), EventMain.class);
                 startActivityForResult(myIntent,0);
             }
         });

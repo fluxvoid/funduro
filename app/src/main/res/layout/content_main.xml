@@ -2,8 +2,7 @@
 
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#efefef">
+    android:layout_height="match_parent">
 
     <TableRow
         android:layout_width="match_parent"
@@ -14,6 +13,7 @@
             android:layout_height="match_parent"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="F"
+            android:textColor="#999999"
             android:id="@+id/textView"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
@@ -45,6 +45,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="A"
+            android:textColor="#999999"
             android:id="@+id/textView2"
             android:textSize="@dimen/abc_action_bar_default_height"
             android:layout_below="@+id/textView"
@@ -77,6 +78,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="A"
+            android:textColor="#999999"
             android:id="@+id/textView3"
             android:textSize="@dimen/abc_action_bar_default_height"
             android:layout_below="@+id/textView2"
@@ -105,6 +107,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="G"
+            android:textColor="#999999"
             android:id="@+id/textView4"
             android:textSize="@dimen/abc_action_bar_default_height"
             android:layout_below="@+id/textView3"

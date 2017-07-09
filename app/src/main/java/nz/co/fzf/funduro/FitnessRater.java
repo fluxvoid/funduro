@@ -1,22 +1,18 @@
 package nz.co.fzf.funduro;
 
 import android.app.Activity;
-import android.app.DatePickerDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
-
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Locale;
 
 public class FitnessRater extends Activity {
 
@@ -24,18 +20,10 @@ public class FitnessRater extends Activity {
     private Spinner abilityTypeSpinner;
     private Spinner genderTypeSpinner;
     private EditText ageText;
+    private EditTextDatePicker agePickerText;
 
     private Calendar myCalendar = Calendar.getInstance();
-    DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener(){
 
-        @Override
-        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-            myCalendar.set(Calendar.YEAR, year);
-            myCalendar.set(Calendar.MONTH, monthOfYear);
-            myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
-            updateLabel();
-        }
-    };
 
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -45,22 +33,42 @@ public class FitnessRater extends Activity {
         initiliseAbilityTypeSpinner();
         initiliseGenderTypeSpinner();
         initiliseSaveButton();
+        initiliseAgePicker();
 
-        ageText.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                new DatePickerDialog(FitnessRater.this, date, myCalendar
-                .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
-                        myCalendar.get(Calendar.DAY_OF_MONTH)).show();
-            }
-        });
     }
 
-    private void updateLabel(){
-        String myFormat = "dd/MM/yyyy";
-        SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.getDefault());
+    public void initiliseAgePicker(){
+        ageText = (EditText) findViewById(R.id.ageText);
 
-        ageText.setText(sdf.format(myCalendar.getTime()));
+        // set previous value if known
+        SharedPreferences sharedPref = getSharedPreferences("Funduro",0);
+        String value = sharedPref.getString("agePickerText", "");
+
+        if(value != ""){
+            ageText.setText(value);
+        }
+
+        agePickerText = new EditTextDatePicker(this, findViewById(R.id.ageText).getId());
+
+        ageText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                SharedPreferences sharedPref = getSharedPreferences("Funduro", 0);
+                SharedPreferences.Editor prefEditor = sharedPref.edit();
+                prefEditor.putString("agePickerText", agePickerText.editText.getText().toString());
+                prefEditor.commit();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
     }
 
     public void initiliseFitnessTypeSpinner(){
