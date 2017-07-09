@@ -11,8 +11,50 @@
 
     <TableRow
         android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/textView13"
+            android:textColor="@android:color/black"
+            android:singleLine="false"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal"
+            android:typeface="serif"
+            android:layout_weight="1" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Days until next event...\n9"
+            android:id="@+id/textView9"
+            android:textColor="@android:color/black"
+            android:singleLine="false"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal"
+            android:typeface="serif"
+            android:layout_weight="1"
+            android:paddingTop="25dp"
+            android:background="#ccffffff"
+            android:layout_marginTop="100dp"
+            android:layout_margin="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="invisible">
+        android:visibility="gone">
 
         <TextView
             android:layout_width="0dp"
@@ -39,7 +81,8 @@
 
     <TableRow
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:visibility="gone">
 
         <GridLayout
             android:layout_width="fill_parent"
