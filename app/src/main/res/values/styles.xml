@@ -1,0 +1,12 @@
+<resources>
+
+    <!-- Base application theme. -->
+
+
+    <style name="AppTheme.NoActionBar">
+        <item name="colorPimary">@color/primaryColour</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+</resources>
